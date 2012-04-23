@@ -1,0 +1,24 @@
+{
+  "name":        "pantzbot",
+  "version":     "2.2.0",
+  "author":      "GitHub Inc.",
+  "keywords":    "github hubot irc bot",
+  "description": "Myplanet Digital's bot",
+  "licenses":     [{
+    "type":       "MIT",
+    "url":        "http://github.com/github/hubot/raw/master/LICENSE"
+  }],
+
+  "repository" : {
+    "type": "git",
+    "url":  "https://github.com/myplanetdigital/pantzbot.git"
+  },
+
+  "dependencies": {
+    "hubot": "2.2.0",
+    "hubot-scripts": ">=2.0.8",
+    "hubot-irc": "0.0.7",
+    "optparse": "1.0.3"
+  }
+}
+
