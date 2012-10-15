@@ -131,7 +131,7 @@
           "version": "2.11.4",
           "dependencies": {
             "form-data": {
-              "version": "0.0.3",
+              "version": "0.0.4",
               "dependencies": {
                 "combined-stream": {
                   "version": "0.0.3",
@@ -142,7 +142,7 @@
                   }
                 },
                 "async": {
-                  "version": "0.1.9"
+                  "version": "0.1.22"
                 }
               }
             },
