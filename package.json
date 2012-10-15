@@ -23,6 +23,7 @@
     "hubot": "*",
     "hubot-scripts": "*",
     "hubot-irc": "*",
+    "jsdom" : ">0.2.1",
     "optparse": "*"
   }
 }
