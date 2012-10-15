@@ -1,11 +1,3 @@
 [
-  "google-hangout",
-  "jenkins.coffee",
-  "jira.coffee",
-  "karma.coffee",
-  "redis-brain.coffee",
-  "twitter.coffee",
-  "twss.coffee",
-  "shipit.coffee",
-  "xkcd.coffee"
+  "google-hangout"
 ]
