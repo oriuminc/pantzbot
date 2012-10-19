@@ -20,7 +20,7 @@ module.exports = (robot) ->
     callmemaybe = robot.brain.data.callmemaybe
 
   robot.respond /call save (https?.+)/i, (msg) ->
-    room = msg.message.user.room
+    room = msg.message.user.room.replace /#/, ""
     chatURL = msg.match[1]
     set_room_url(room, chatURL)
     save(robot)
@@ -30,7 +30,7 @@ module.exports = (robot) ->
     msg.send theResponse
 
   robot.respond /call me/i, (msg) ->
-    room = msg.message.user.room
+    room = msg.message.user.room.replace /#/, ""
     theResponse = "Click here for " + room + " video chat:\n"
     theResponse += callmemaybe[room] + "\n"
     msg.send theResponse
