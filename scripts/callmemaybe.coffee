@@ -3,7 +3,6 @@
 #
 # Commands:
 #   hubot call me - Returns a video chat url based on the current room
-#   hubot call me maybe - Returns a video chat url based on the current room
 #   hubot call [help|list|save] <room> - Manages room links //TODO help list
 #   hubot whos calling - Returns a list of recent video chats //TODO
 
@@ -34,9 +33,4 @@ module.exports = (robot) ->
     room = msg.message.user.room
     theResponse = "Click here for " + room + " video chat:\n"
     theResponse += callmemaybe[room] + "\n"
-    msg.send theResponse
-
-  robot.respond /call me maybe/i, (msg) ->
-    theResponse = "Click here for video chat:\n"
-    theResponse += "http://www.youtube.com/watch?v=fWNaR-rxAic"
     msg.send theResponse
