@@ -8,8 +8,9 @@
 
 callmemaybe = {}
 
-set_room_url = (room, video_url) ->
-  callmemaybe[room] = video_url
+set_chat_url = (room, chatUrl) ->
+  callmemaybe[room] ?= ''
+  callmemaybe[room] = chatUrl
 
 save = (robot) ->
   robot.brain.data.callmemaybe = callmemaybe
@@ -21,11 +22,11 @@ module.exports = (robot) ->
 
   robot.respond /call save (https?.+)/i, (msg) ->
     room = msg.message.user.room
-    chatURL = msg.match[1]
-    set_room_url(room, chatURL)
+    chatUrl = msg.match[1]
+    set_chat_url(room, chatUrl)
     save(robot)
     theResponse = """
-                  Saved URL for #{room} chat.
+                  Saved chat URL for #{room}.
                   Can I call you? ;)
                   """
 
