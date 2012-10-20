@@ -1,7 +1,7 @@
 The Myplanet README
 ===================
 
-This document aims to be the bare minimum needed to help folks
+This document aims to be the bare minimum needed to help
 Myplaneteers contribute to the Pantzbot IRC bot.
 
 Contributing
@@ -18,11 +18,14 @@ contribution:
 - There are tons of community scripts available:
   https://github.com/github/hubot-scripts/blob/master/src/scripts/
 
-- Community scripts are already pulled in as a package via `package.json`,
-  so we just need to enable them in in `hubot-scripts.json`.
+- This repo doesn't contain the hubot codebase, but the `packages.json`
+file pulls in that codebase, among other things.
 
-- Custom scripts can be placed as `scripts/*.coffee`. These do not need
-  to be loaded in in `hubot-scripts.json`.
+- Community scripts are already pulled in as a package via
+`package.json`, so we just need to enable them in `hubot-scripts.json`.
+
+- Custom scripts can be placed as `scripts/*.coffee`. Unlike community
+scripts, these do not need to be enabled via `hubot-scripts.json`.
 
 - A few scripts come with the actual hubot package (rather than the
   community scripts package) and are also pulled in via `package.json`.
@@ -31,8 +34,11 @@ them into our `scripts/` directory.
 
 - You can test pantzbot locally by running it like this:
 
+        # Install redis server
         brew install redis
+        # Turn on redis server and send to background
         redis-server 2>&1 > /dev/null &
+        # Install all the node.js packages
         npm install
         bash bin/hubot
         Hubot> hubot help
@@ -42,14 +48,17 @@ environment variables, you can start the bot like this:
 
         HUBOT_VAR1=value1 HUBOT_VAR2=value2 bash bin/hubot
 
-- `npm-shrinkwrap.json` is the lockfile of specific npm packages that
-  should be installed, and is derived from the `package.json` file. The
-easiest way to upgrade packages is to erase the lockfile and run `npm
-install` to regenerate it fresh.
+- `packages.json` has a lot of fuzziness in the node package versions it
+downloads, so building hubot from that file on one day might be
+different from the other. When present, `npm-shrinkwrap.json` acts as a
+"lockfile" of specific packages that should be `npm install`ed, and is
+derived from the `package.json` file.  The easiest way to upgrade
+packages is to erase the lockfile and run `npm shrinkwrap` to regenerate
+it fresh.
 
 - Some scripts will have node package dependencies that will need to be
-  added to `package.json`. (Make sure to regenerate
-`npm-shrinkwrap.json` afterward.)
+added to `package.json`. (Make sure to regenerate `npm-shrinkwrap.json`
+afterward.)
 
 - We host pantzbot on Heroku, a service like Acquia, but for
   node.js apps rather than Drupal. Once you've tested your changes to
