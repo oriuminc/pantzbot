@@ -7,11 +7,13 @@
 
 callmemaybe = {}
 
-set_chat_url = (room, chatUrl) ->
+set_chat_url = (msg, room, chatUrl) ->
   console.log "chatUrl: #{chatUrl}"
   console.log "room: #{room}"
   callmemaybe[room] ?= ''
   callmemaybe[room] = chatUrl
+  msg.send "Saved chat URL for #{room}. Can I call you? ;)"
+
 
 save = (robot) ->
   robot.brain.data.callmemaybe = callmemaybe
@@ -24,26 +26,12 @@ module.exports = (robot) ->
   robot.respond /call set (https?.+)/i, (msg) ->
     room = msg.message.user.room
     chatUrl = msg.match[1]
-    set_chat_url(room, chatUrl)
+    set_chat_url(msg, room, chatUrl)
     save(robot)
-    theResponse = """
-                  Saved chat URL for #{room}.
-                  Can I call you? ;)
-                  """
-
-    msg.send theResponse
 
   robot.respond /call me(?! maybe)/i, (msg) ->
     room = msg.message.user.room
-    theResponse = """
-                  Click here for #{room} video chat:
-                  #{callmemaybe[room]}
-                  """
-    msg.send theResponse
+    msg.send "Click here for #{room} video chat: #{callmemaybe[room]}"
 
   robot.respond /call me maybe/i, (msg) ->
-    theResponse = """
-                  Click here for video chat:
-                  http://www.youtube.com/watch?v=fWNaR-rxAic
-                  """
-    msg.send theResponse
+    msg.send "Click here for video chat: http://www.youtube.com/watch?v=fWNaR-rxAic"
