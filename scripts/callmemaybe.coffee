@@ -29,9 +29,9 @@ module.exports = (robot) ->
     set_chat_url(msg, room, chatUrl)
     save(robot)
 
-  robot.respond /call me(?! maybe)/i, (msg) ->
+  robot.respond /call me( maybe)?/i, (msg) ->
     room = msg.message.user.room
-    msg.send "Click here for #{room} video chat: #{callmemaybe[room]}"
-
-  robot.respond /call me maybe/i, (msg) ->
-    msg.send "Click here for video chat: http://www.youtube.com/watch?v=fWNaR-rxAic"
+    chatUrl = callmemaybe[room]
+    if msg.match[1]?
+      chatUrl = "http://www.youtube.com/watch?v=fWNaR-rxAic"
+    msg.send "Click here for #{room} video chat: #{chatUrl}"
