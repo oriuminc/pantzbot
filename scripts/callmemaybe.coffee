@@ -8,6 +8,8 @@
 callmemaybe = {}
 
 set_chat_url = (room, chatUrl) ->
+  console.log "chatUrl: #{chatUrl}"
+  console.log "room: #{room}"
   callmemaybe[room] ?= ''
   callmemaybe[room] = chatUrl
 
