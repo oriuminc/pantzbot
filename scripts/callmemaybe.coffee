@@ -3,7 +3,7 @@
 #
 # Commands:
 #   hubot call me - Returns the video chat url for the current room
-#   hubot call set <chatUrl> - Sets the video chat url for the current room
+#   hubot call set <url> - Sets the video chat url for the current room
 
 set_chat_url = (callmemaybeData, room, chatUrl) ->
   callmemaybeData[room] = chatUrl
