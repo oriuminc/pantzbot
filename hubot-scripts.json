@@ -1,4 +1,5 @@
 [
   "drupalorg.coffee",
+  "janky",
   "redis-brain.coffee"
 ]
