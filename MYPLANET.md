@@ -39,6 +39,7 @@ them into our `scripts/` directory.
         # Turn on redis server and send to background
         redis-server 2>&1 > /dev/null &
         # Install all the node.js packages
+        cd path/to/where/you/checked/out/hubot
         npm install
         bash bin/hubot
         Hubot> hubot help
