@@ -20,14 +20,9 @@ module.exports = (robot) ->
     set_chat_url(callmemaybeData, room, chatUrl)
     msg.send "Saved chat URL for #{room}. Can I call you? ;)"
 
-# To re-enable Carly Rae Jepsen:
-#  - replace line 27 with line 26
-#  - replace line 32 with 31
-#  robot.respond /call me( maybe)?/i, (msg) ->
    robot.respond /call me( video)?/i, (msg) ->
     room = msg.message.user.room
     chatUrl = robot.brain.data.callmemaybe[room]
     if msg.match[1]?
-#     chatUrl = "http://www.youtube.com/watch?v=fWNaR-rxAic"
-      chatUrl = "https://hall.com/hall_video/honeybadgers/video"
+      chatUrl = "http://www.youtube.com/watch?v=fWNaR-rxAic"
     msg.send "Click here for #{room} video chat: #{chatUrl}"
