@@ -20,7 +20,7 @@ module.exports = (robot) ->
     set_chat_url(callmemaybeData, room, chatUrl)
     msg.send "Saved chat URL for #{room}. Can I call you? ;)"
 
-   robot.respond /call me( maybe)?/i, (msg) ->
+   robot.respond /call me( video)?/i, (msg) ->
     room = msg.message.user.room
     chatUrl = robot.brain.data.callmemaybe[room]
     if msg.match[1]?
