@@ -1,5 +1,5 @@
 [
   "drupalorg.coffee",
-  "janky.coffee",
-  "redis-brain.coffee"
+  "redis-brain.coffee",
+  "scrumnotes.coffee"
 ]
