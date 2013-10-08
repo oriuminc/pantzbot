@@ -1,5 +1,17 @@
 # Hubot
 
+Myplanet's Hubot, Pantzbot, lives here:
+
+    https://github.com/myplanetdigital/pantzbot
+
+He works on Heroku at:
+
+    git@heroku.com:pantzbot.git
+
+Further Myplanet-specific docs are available in `MYPLANET.md`.
+
+--------------
+
 This is a version of GitHub's Campfire bot, hubot. He's pretty cool.
 
 This version is designed to be deployed on [Heroku][heroku].
