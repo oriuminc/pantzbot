@@ -1,29 +1,27 @@
 {
-  "name":        "pantzbot",
-  "version":     "2.2.0",
-  "author":      "GitHub Inc.",
-  "keywords":    "github hubot irc bot",
+  "name": "pantzbot",
+  "version": "2.2.0",
+  "author": "GitHub Inc.",
+  "keywords": "github hubot irc bot",
   "description": "Myplanet Digital's bot",
-  "licenses":     [{
-    "type":       "MIT",
-    "url":        "http://github.com/github/hubot/raw/master/LICENSE"
-  }],
-
-  "repository" : {
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/github/hubot/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
     "type": "git",
-    "url":  "https://github.com/myplanetdigital/pantzbot.git"
+    "url": "https://github.com/myplanetdigital/pantzbot.git"
   },
-
   "engines": {
     "node": "0.8.x",
-    "npm":  "1.3.x"
+    "npm": "1.3.x"
   },
-
   "dependencies": {
     "hubot": "*",
     "hubot-scripts": "*",
-    "jsdom": "*",
-    "hubot-slack": "*"
+    "hubot-slack": "*",
+    "hubot-drupalorg": "*"
   }
 }
-
