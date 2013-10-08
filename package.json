@@ -22,7 +22,7 @@
   "dependencies": {
     "hubot": "*",
     "hubot-scripts": "*",
-    "hubot-irc": "*",
+    "hubot-slack": "*",
     "jsdom" : ">0.2.1",
     "optparse": "*"
   }
