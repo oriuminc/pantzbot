@@ -57,18 +57,6 @@ environment variables, you can start the bot like this:
 
         HUBOT_VAR1=value1 HUBOT_VAR2=value2 bash bin/hubot
 
-- `packages.json` has a lot of fuzziness in the node package versions it
-downloads, so building hubot from that file on one day might be
-different from the other. When present, `npm-shrinkwrap.json` acts as a
-"lockfile" of specific packages that should be `npm install`ed, and is
-derived from the `package.json` file.  The easiest way to upgrade
-packages is to erase the lockfile and run `npm shrinkwrap` to regenerate
-it fresh.
-
-- Some scripts will have node package dependencies that will need to be
-added to `package.json`. (Make sure to regenerate `npm-shrinkwrap.json`
-afterward.)
-
 - We host pantzbot on Heroku, a service like Acquia, but for
   node.js apps rather than Drupal. Once you've tested your changes to
 pantzbot, you'll need to get Heroku access in order to push it live.
