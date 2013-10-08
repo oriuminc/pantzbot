@@ -22,6 +22,7 @@
   "dependencies": {
     "hubot": "*",
     "hubot-scripts": "*",
+    "jsdom": "*",
     "hubot-slack": "*"
   }
 }
