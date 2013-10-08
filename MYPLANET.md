@@ -61,7 +61,7 @@ environment variables, you can start the bot like this:
   node.js apps rather than Drupal. Once you've tested your changes to
 pantzbot, you'll need to get Heroku access in order to push it live.
   - Create a Heroku account:
-  - Ask anyone with prior access (most obviously patcon or mparker17),
+  - Ask anyone with prior access (most obviously @patcon or @emarchak),
     and they should be able to grant you access via this page:
 https://dashboard.heroku.com/apps/pantzbot/collaborators
   - You'll probably want to install the heroku gem for convenience:
