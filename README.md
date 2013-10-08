@@ -4,6 +4,9 @@ Myplanet's Hubot, Pantzbot, lives here:
 
     https://github.com/myplanetdigital/pantzbot
 
+*He has temporarily changed his name to "Slackbot" until Slack can
+accomodate custom bot name.*
+
 He works on Heroku at:
 
     git@heroku.com:pantzbot.git
