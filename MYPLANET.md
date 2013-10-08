@@ -21,16 +21,24 @@ contribution:
 - This repo doesn't contain the hubot codebase, but the `packages.json`
 file pulls in that codebase, among other things.
 
-- Community scripts are already pulled in as a package via
-`package.json`, so we just need to enable them in `hubot-scripts.json`.
+- Hubot scripts can live in a couple of places:
 
-- Custom scripts can be placed as `scripts/*.coffee`. Unlike community
-scripts, these do not need to be enabled via `hubot-scripts.json`.
+  1. **Community scripts** are already pulled in via the `hubot-scripts` dep
+    in `package.json`, so we just need to enable them in
+    `hubot-scripts.json`.
 
-- A few scripts come with the actual hubot package (rather than the
-  community scripts package) and are also pulled in via `package.json`.
-We treat them a little like custom scripts, and load them by symlinking
-them into our `scripts/` directory.
+  2. **Custom scripts** can be placed as `scripts/*.coffee`. Unlike community
+    scripts, these do not need to be enabled via `hubot-scripts.json`.
+
+  3. A few scripts come with the actual `hubot` package (rather than the
+    community scripts package) and so these **default scripts** are
+    included with that package.  We treat them a little like custom scripts,
+    and load them by symlinking them into our `scripts/` directory.
+
+  4. **Package scripts** are actually external packages, which can be
+    pulled in via inclusion in `packages.json`. They are the
+    recommended type of script, as they can have their own dependencies
+    pulled in automatically from *their* `package.json`.
 
 - You can test pantzbot locally by running it like this:
 
@@ -69,12 +77,15 @@ pantzbot, you'll need to get Heroku access in order to push it live.
     and they should be able to grant you access via this page:
 https://dashboard.heroku.com/apps/pantzbot/collaborators
   - You'll probably want to install the heroku gem for convenience:
+
             gem install heroku
 
   - If you need to set any configurations via environment variables, so
     it like so:
+
             heroku config:set ENVVAR1=value1 ENVVAR2=value2
 
   - Lastly, add the git remote and push:
+
             git remote add heroku git@heroku.com:pantzbot.git
             git push heroku
