@@ -21,6 +21,8 @@
   "dependencies": {
     "hubot": "*",
     "hubot-scripts": "*",
+    "underscore": ">= 1.0.0",
+    "clark": ">= 0.0.6",
     "hubot-slack": "*",
     "hubot-drupalorg": "*"
   }

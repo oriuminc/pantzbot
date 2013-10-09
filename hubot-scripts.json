@@ -1,5 +1,6 @@
 [
   "factoid.coffee",
+  "plusplus.coffee",
   "redis-brain.coffee",
   "scrumnotes.coffee"
 ]
