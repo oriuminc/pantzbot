@@ -23,7 +23,7 @@
     "hubot-scripts": "*",
     "underscore": ">= 1.0.0",
     "clark": ">= 0.0.6",
-    "hubot-slack": "https://github.com/myplanet-experimental/hubot-slack/archive/5-no-url-conversion.tar.gz",
+    "hubot-slack": "https://github.com/myplanet-experimental/hubot-slack/archive/b536546.tar.gz",
     "hubot-drupalorg": "*"
   }
 }
