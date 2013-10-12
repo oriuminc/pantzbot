@@ -4,6 +4,9 @@ The Myplanet README
 This document aims to be the bare minimum needed to help
 Myplaneteers contribute to the Pantzbot IRC bot.
 
+Full scripting docs [available in the official Hubot
+documentation](https://github.com/github/hubot/blob/master/docs/scripting.md).
+
 Contributing
 ------------
 
