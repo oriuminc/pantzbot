@@ -25,6 +25,6 @@
     "clark": ">= 0.0.6",
     "hubot-slack": "https://github.com/tinyspeck/hubot-slack/archive/master.tar.gz",
     "hubot-drupalorg": "*",
-    "hubot-vanity-github": "https://github.com/patcon/hubot-vanity-github/archive/17b8870.tar.gz"
+    "hubot-vanity-github": "https://github.com/patcon/hubot-vanity-github/archive/81407a0.tar.gz"
   }
 }
