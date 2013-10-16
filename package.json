@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "hubot": "*",
+    "ical": "*",
+    "request": "*",
     "hubot-scripts": "*",
     "underscore": ">= 1.0.0",
     "clark": ">= 0.0.6",
