@@ -3,5 +3,6 @@
   "kittens.coffee",
   "plusplus.coffee",
   "redis-brain.coffee",
-  "scrumnotes.coffee"
+  "scrumnotes.coffee",
+  "twitter_mention.coffee"
 ]
