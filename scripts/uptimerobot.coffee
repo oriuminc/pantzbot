@@ -2,15 +2,23 @@
 #   Return site uptime from Uptime Robot service.
 #
 # Commands:
-#   hubot uptime - Returns uptime for sites.
+#   hubot uptime <filter> - Returns uptime for sites.
 
 module.exports = (robot) ->
-  robot.respond /uptime (.*)/i, (msg) ->
+
+  REGEX = ///
+    uptime
+    (       # 1)
+      \s+   #    whitespace
+      (.*)  # 2) filter
+    )?
+  ///i
+  robot.respond REGEX, (msg) ->
     Client = require 'uptime-robot'
     client = new Client process.env.HUBOT_UPTIMEROBOT_KEY
 
     interval_days = 1
-    filter = msg.match[1]
+    filter = msg.match[2]
 
     data =
       customUptimeRatio: [interval_days]
@@ -19,18 +27,19 @@ module.exports = (robot) ->
       if err
         throw err
 
-      query = require 'array-query'
-      matches = query('friendlyname')
-        .regex(///
-          #{filter}
-        ///i)
-        .on res
+      monitors = res
 
-      for match, i in matches
-        name = match.friendlyname
-        url = match.url
-        uptime = match.customuptimeratio
-        status = switch match.status
+      if filter
+        query = require 'array-query'
+        monitors = query('friendlyname')
+          .regex(new RegExp filter, 'i')
+          .on res
+
+      for monitor, i in monitors
+        name   = monitor.friendlyname
+        url    = monitor.url
+        uptime = monitor.customuptimeratio
+        status = switch monitor.status
           when "0" then "paused"
           when "1" then "not checked yet"
           when "2" then "up"
