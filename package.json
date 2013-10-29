@@ -22,7 +22,7 @@
     "hubot": "*",
     "ical": "*",
     "request": "*",
-    "hubot-scripts": "*",
+    "hubot-scripts": "https://github.com/patcon/hubot-scripts/archive/078a1fc43e7a3954d258ad939d46080192992c9d.tar.gz",
     "underscore": ">= 1.0.0",
     "clark": ">= 0.0.6",
     "oauth": "*",
