@@ -26,6 +26,7 @@
     "underscore": ">= 1.0.0",
     "clark": ">= 0.0.6",
     "oauth": "*",
+    "sprintf": "*",
     "uptime-robot": "*",
     "array-query": "*",
     "hubot-slack": "https://github.com/myplanet-experimental/hubot-slack/archive/e6fad89.tar.gz",
