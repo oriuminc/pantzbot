@@ -1,1 +1,0 @@
-../node_modules/hubot/src/scripts/roles.coffee
