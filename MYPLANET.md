@@ -80,3 +80,10 @@ https://dashboard.heroku.com/apps/pantzbot/collaborators
 
             git remote add heroku git@heroku.com:pantzbot.git
             git push heroku
+
+Notes
+-----
+
+* You'll need to install redis to test locally:
+
+        brew install redis # Follow onscreen instructions after install.
