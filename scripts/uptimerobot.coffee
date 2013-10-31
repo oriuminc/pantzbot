@@ -1,6 +1,9 @@
 # Description:
 #   Return site uptime from Uptime Robot service.
 #
+# Dependencies:
+#   uptime-robot
+#
 # Commands:
 #   hubot uptime <filter> - Returns uptime for sites.
 
