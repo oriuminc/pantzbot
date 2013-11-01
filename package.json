@@ -29,7 +29,7 @@
     "sprintf": "*",
     "uptime-robot": "*",
     "array-query": "*",
-    "hubot-slack": "https://github.com/myplanet-experimental/hubot-slack/archive/e6fad89.tar.gz",
+    "hubot-slack": "~1.5.0",
     "hubot-drupalorg": "*",
     "hubot-vanity-github": "https://github.com/patcon/hubot-vanity-github/archive/81407a0.tar.gz"
   }
