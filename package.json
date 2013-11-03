@@ -29,7 +29,7 @@
     "sprintf": "*",
     "uptime-robot": "*",
     "array-query": "*",
-    "hubot-slack": "~1.5.0",
+    "hubot-slack": "git://github.com/tinyspeck/hubot-slack.git#unit-tests",
     "hubot-drupalorg": "*",
     "hubot-vanity-github": "https://github.com/patcon/hubot-vanity-github/archive/81407a0.tar.gz"
   }
