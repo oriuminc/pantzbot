@@ -49,7 +49,7 @@ module.exports = (robot) ->
           when "8" then "seems down"
           when "9" then "down"
 
-        msg.send "Status of #{name} [#{url}]: #{status} (#{uptime}% uptime)"
+        msg.send "#{status.toUpperCase()} <- #{url} (#{uptime}% uptime)"
 
   robot.respond /uptime add-check (\S+)( (.*))?$/i, (msg) ->
     url = require('url').parse(msg.match[1])
