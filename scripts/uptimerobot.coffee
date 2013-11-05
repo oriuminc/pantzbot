@@ -4,11 +4,16 @@
 # Dependencies:
 #   uptime-robot
 #
+# Configuration:
+#   HUBOT_UPTIMEROBOT_APIKEY
+#   HUBOT_UPTIMEROBOT_CONTACT_ID (optional)
+#
 # Commands:
 #   hubot uptime <filter> - Returns uptime for sites.
 #   hubot uptime add-check <url> - Adds a new uptime check.
 
 apiKey = process.env.HUBOT_UPTIMEROBOT_APIKEY
+alertContactId = process.env.HUBOT_UPTIMEROBOT_CONTACT_ID
 
 module.exports = (robot) ->
 
@@ -65,6 +70,9 @@ module.exports = (robot) ->
         monitorType: 1
         format: "json"
         noJsonCallback: 1
+        monitorAlertContacts: [
+          alertContactId
+        ]
       })
       .get() (err, res, body) ->
         response = JSON.parse(body)
