@@ -10,7 +10,7 @@
 #
 # Commands:
 #   hubot uptime <filter> - Returns uptime for sites.
-#   hubot uptime add-check <url> - Adds a new uptime check.
+#   hubot uptime add-check <http://example.com> - Adds a new uptime check.
 
 apiKey = process.env.HUBOT_UPTIMEROBOT_APIKEY
 alertContactId = process.env.HUBOT_UPTIMEROBOT_CONTACT_ID
