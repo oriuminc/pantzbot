@@ -2,7 +2,7 @@
 #   View and manage Gittip gifts for a specific user.
 #
 # Dependencies:
-#   None.
+#   array-query
 #
 # Configuration:
 #   HUBOT_GITTIP_APIKEY
@@ -28,18 +28,27 @@ module.exports = (robot) ->
 
   REGEX = ///
     gittip
-    (       # 1)
-      \s+   #    whitespace
-      (.*)  # 2) cmd
-    )?
+    (        # 1)
+      \s+    #    whitespace
+      (\S+)   # 2) cmd
+      (      # 3)
+        \s+  #    whitespace
+        (\S+) # 4) arg
+      )?
+    )
   ///i
 
   robot.respond REGEX, (msg) ->
     cmd = msg.match[2]
+    arg = msg.match[4]
+
     switch cmd
       when "giving"
         msg.http("#{endpoint}/#{username}/public.json")
           .get() (err, res, body) ->
+            if err
+              throw err
+
             response = JSON.parse(body)
 
             msg.send "#{username} is currently giving $#{response.giving}/week in tips."
@@ -48,11 +57,21 @@ module.exports = (robot) ->
         msg.send "current max availability for weekly tips is $#{maxTip}."
 
       when "tips"
-        msg.send "List of all tips from #{username}:"
+        filter = arg
+        msg.send "Listing tips given by #{username}:"
+
         msg.http("#{endpoint}/#{username}/tips.json")
           .get() (err, res, body) ->
-            response = JSON.parse(body)
-            tips = response
+            if err
+              throw err
+
+            tips = JSON.parse(body)
+
+            if filter
+              query = require 'array-query'
+              tips = query('username')
+                .regex(new RegExp filter, 'i')
+                .on tips
 
             printTip = (tip) ->
               msg.send "$#{tip.amount} => #{tip.username}"
