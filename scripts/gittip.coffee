@@ -52,8 +52,8 @@ module.exports = (robot) ->
           .get() (err, res, body) ->
             response = JSON.parse(body)
             tips = response
-            printTip = (tip) ->
-              msg.send "#{tip.username}: $#{tip.amount}"
-
             msg.send "List of all tips from #{username}:"
+
+            printTip = (tip) ->
+              msg.send "$#{tip.amount} => #{tip.username}"
             printTip(tip) for tip in tips
