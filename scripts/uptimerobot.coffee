@@ -2,6 +2,7 @@
 #   Return site uptime from Uptime Robot service.
 #
 # Dependencies:
+#   array-query
 #   uptime-robot
 #
 # Configuration:
