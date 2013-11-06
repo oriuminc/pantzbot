@@ -13,6 +13,7 @@
 #   hubot gittip giving - Show total of tips.
 #   hubot gittip max - Show max tips available via hubot.
 #   hubot gittip tips - List individual tips.
+#   hubot gittip give <username> <dollars> - Start tipping a user.
 
 
 module.exports = (robot) ->
@@ -23,7 +24,7 @@ module.exports = (robot) ->
   endpoint = "https://#{apiKey}:@www.gittip.com"
 
   unless apiKey and username and maxTip
-    console.log "twitter_mention.coffee: HUBOT_GITTIP_APIKEY, HUBOT_GITTIP_USERNAME and HUBOT_GITTIP_MAXTIP are required."
+    console.log "gittip.coffee: HUBOT_GITTIP_APIKEY, HUBOT_GITTIP_USERNAME and HUBOT_GITTIP_MAXTIP are required."
     return
 
   REGEX = ///
@@ -33,16 +34,33 @@ module.exports = (robot) ->
       (\S+)   # 2) cmd
       (      # 3)
         \s+  #    whitespace
-        (\S+) # 4) arg
+        (.+) # 4) arg
       )?
     )
-  ///i
+  $///i
 
   robot.respond REGEX, (msg) ->
     cmd = msg.match[2]
     arg = msg.match[4]
 
     switch cmd
+      when "give"
+        [recipient, amount] = arg.split /\s+/
+
+        data =
+          amount: amount
+          platform: "gittip"
+          username: recipient
+
+        msg.http("#{endpoint}/#{username}/tips.json")
+          .post(JSON.stringify [data]) (err, res, body) ->
+            if err
+              throw err
+
+            response = JSON.parse(body)[0]
+
+            msg.send "Now giving $#{response.amount}/week to #{response.username}."
+
       when "giving"
         msg.http("#{endpoint}/#{username}/public.json")
           .get() (err, res, body) ->
