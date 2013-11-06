@@ -4,5 +4,6 @@
   "plusplus.coffee",
   "redis-brain.coffee",
   "scrumnotes.coffee",
+  "tweeter.coffee",
   "twitter_mention.coffee"
 ]
