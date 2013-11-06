@@ -48,11 +48,11 @@ module.exports = (robot) ->
         msg.send "current max availability for weekly tips is $#{maxTip}."
 
       when "tips"
+        msg.send "List of all tips from #{username}:"
         msg.http("#{endpoint}/#{username}/tips.json")
           .get() (err, res, body) ->
             response = JSON.parse(body)
             tips = response
-            msg.send "List of all tips from #{username}:"
 
             printTip = (tip) ->
               msg.send "$#{tip.amount} => #{tip.username}"
