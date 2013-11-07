@@ -13,7 +13,7 @@
 #   hubot gittip giving - Show total of tips.
 #   hubot gittip max - Show max tips available via hubot.
 #   hubot gittip tips - List individual tips.
-#   hubot gittip give <username> <dollars> - Start tipping a user.
+#   hubot gittip give <username> <dollars> - Start tipping a user. (case-sensitive)
 
 
 module.exports = (robot) ->
