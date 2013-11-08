@@ -1,5 +1,6 @@
 [
   "factoid.coffee",
+  "isup.coffee",
   "kittens.coffee",
   "plusplus.coffee",
   "redis-brain.coffee",
