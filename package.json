@@ -22,7 +22,7 @@
     "hubot": "*",
     "ical": "*",
     "request": "*",
-    "hubot-scripts": "https://github.com/patcon/hubot-scripts/archive/078a1fc43e7a3954d258ad939d46080192992c9d.tar.gz",
+    "hubot-scripts": "git://github.com/patcon/hubot-scripts.git#078a1fc43e7",
     "underscore": ">= 1.0.0",
     "clark": ">= 0.0.6",
     "oauth": "*",
@@ -33,6 +33,6 @@
     "hubot-slack": "~1.5",
     "hubot-drupalorg": "*",
     "hubot-gittip": "git://github.com/myplanetdigital/hubot-gittip.git#4e86fab6",
-    "hubot-vanity-github": "https://github.com/patcon/hubot-vanity-github/archive/81407a0.tar.gz"
+    "hubot-vanity-github": "git://github.com/patcon/hubot-vanity-github.git#81407a0"
   }
 }
