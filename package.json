@@ -32,7 +32,7 @@
     "twit": "~1.1.8",
     "hubot-slack": "~1.5",
     "hubot-drupalorg": "*",
-    "hubot-gittip": "git://github.com/myplanetdigital/hubot-gittip.git#4e86fab6",
+    "hubot-gittip": "git://github.com/myplanetdigital/hubot-gittip.git#c8a9865",
     "hubot-vanity-github": "git://github.com/patcon/hubot-vanity-github.git#81407a0"
   }
 }
