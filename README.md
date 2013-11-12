@@ -177,3 +177,7 @@ Add the subdomain hubot should connect to. If you web URL looks like
 You may want to get comfortable with `heroku logs` and `heroku restart`
 if you're having issues.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/myplanetdigital/slackbot/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
