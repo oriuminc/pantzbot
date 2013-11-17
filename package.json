@@ -29,6 +29,7 @@
     "sprintf": "*",
     "uptime-robot": "*",
     "array-query": "*",
+    "moment": "*",
     "twit": "~1.1.8",
     "hubot-slack": "~1.5",
     "hubot-drupalorg": "*",
