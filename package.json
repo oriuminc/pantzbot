@@ -31,7 +31,7 @@
     "array-query": "*",
     "moment": "*",
     "twit": "~1.1.8",
-    "hubot-slack": "git://github.com/myplanet-experimental/hubot-slack.git#f22b2a7",
+    "hubot-slack": "~1.5",
     "hubot-drupalorg": "*",
     "hubot-gittip": "~0.0.1",
     "hubot-vanity-github": "git://github.com/patcon/hubot-vanity-github.git#81407a0"
