@@ -93,10 +93,3 @@ environment variables, you can start the bot like this:
 
             git remote add heroku git@heroku.com:pantzbot.git
             git push heroku
-
-Notes
------
-
-* You'll need to install redis to test locally:
-
-        brew install redis # Follow onscreen instructions after install.
