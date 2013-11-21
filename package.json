@@ -19,6 +19,7 @@
     "npm": "1.3.x"
   },
   "dependencies": {
+    "githubot": "0.4.x",
     "hubot": "*",
     "ical": "*",
     "request": "*",
