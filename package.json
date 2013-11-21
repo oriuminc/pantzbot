@@ -35,6 +35,6 @@
     "hubot-drupalorg": "*",
     "hubot-gittip": "~0.0.1",
     "hubot-vanity-github": "git://github.com/patcon/hubot-vanity-github.git#81407a0",
-    "hubot-uptimerobot": "0.0.1"
+    "hubot-uptimerobot": "0.0.2"
   }
 }
