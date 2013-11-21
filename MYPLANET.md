@@ -12,8 +12,10 @@ Contributing
 
 Pantzbot is open for anyone at Myplanet to hack on. It's pretty hard to
 break, and as of right now, we're not using it for anything mission
-critical, so definitely do worry too much about jumping in and adding
+critical, so definitely don't worry too much about jumping in and adding
 some plugins.
+
+### Scripting Hints
 
 Here are some quick pointers to help orientate you before your first
 contribution:
@@ -43,36 +45,47 @@ file pulls in that codebase, among other things.
     recommended type of script, as they can have their own dependencies
     pulled in automatically from *their* `package.json`.
 
+### Local Testing
+
 - You can test pantzbot locally by running it like this:
 
-        # Install redis server
+        # Install redis server and follow post-install instructions
         brew install redis
-        # Turn on redis server and send to background
-        redis-server 2>&1 > /dev/null &
+
         # Install all the node.js packages
         cd path/to/where/you/checked/out/hubot
         npm install
-        bash bin/hubot
+        bin/hubot
         Hubot> hubot help
 
-  If the functionality you wish to test requires configuration via
+If the functionality you wish to test requires configuration via
 environment variables, you can start the bot like this:
 
-        HUBOT_VAR1=value1 HUBOT_VAR2=value2 bash bin/hubot
+        HUBOT_VAR1=value1 HUBOT_VAR2=value2 bin/hubot
+
+### Easy Deployment
 
 - We host pantzbot on Heroku, a service like Acquia, but for
-  node.js apps rather than Drupal. Once you've tested your changes to
-pantzbot, you'll need to get Heroku access in order to push it live.
-  - Create a Heroku account:
-  - Ask anyone with prior access (most obviously @patcon or @emarchak),
-    and they should be able to grant you access via this page:
-https://dashboard.heroku.com/apps/pantzbot/collaborators
-  - You'll probably want to install the heroku gem for convenience:
+  node.js apps rather than Drupal.
+- To make things a little easier, we've set things up so that you just
+  need to push/merge into `master` branch on GitHub, and Travis CI will take care
+  of the deploy. Pull requests are highly recommended. You can follow
+  along with the Travis output after pushing, and if the deploy was
+  successful, you'll see a message dropped into the `#hubot` channel in
+  the company chat.
 
-            gem install heroku
+### Advanced Deployment
 
-  - If you need to set any configurations via environment variables, so
-    it like so:
+  - If you need to set environment variables for your addition, you'll
+  need to talk to someone with direct access to Heroku. Ask someone with
+  prior access (most obviously @patcon or @emarchak), and they should be
+  able to do it for you or grant you Heroku access via this page:
+  https://dashboard.heroku.com/apps/pantzbot/collaborators
+  - You'll want to install the heroku toolbelt for convenience:
+
+            https://toolbelt.heroku.com/
+
+  - To set any configurations via environment variables, do this:
 
             heroku config:set ENVVAR1=value1 ENVVAR2=value2
 

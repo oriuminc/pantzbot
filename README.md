@@ -1,17 +1,12 @@
-# Hubot
+# Pantzbot
+[![Build Status](https://travis-ci.org/myplanetdigital/pantzbot.png?branch=master)](https://travis-ci.org/myplanetdigital/pantzbot)
 
 Myplanet's Hubot, Pantzbot, lives here:
 
     https://github.com/myplanetdigital/pantzbot
 
-*He has temporarily changed his name to "Slackbot" until Slack can
-accomodate custom bot name.*
-
-He works on Heroku at:
-
-    git@heroku.com:pantzbot.git
-
-Further Myplanet-specific docs are available in `MYPLANET.md`.
+Further Myplanet-specific docs are available in
+[`MYPLANET.md`](MYPLANET.md).
 
 --------------
 
