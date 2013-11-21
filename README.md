@@ -1,5 +1,6 @@
 # Pantzbot
-[![Build Status](https://travis-ci.org/myplanetdigital/pantzbot.png?branch=master)](https://travis-ci.org/myplanetdigital/pantzbot)
+[![Travis
+CI](http://img.shields.io/travis-ci/myplanetdigital/pantzbot.png)](https://travis-ci.org/myplanetdigital/pantzbot)
 
 Myplanet's Hubot, Pantzbot, lives here:
 
