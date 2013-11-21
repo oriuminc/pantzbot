@@ -1,0 +1,22 @@
+language: node_js
+
+env:
+  global:
+    # TRAVIS_SSH_PRIVATE_KEY_URL
+    - secure: "KDS5ZznPW/76M+k2r5F/a2+l6erkLgEaRxqyeYk2afpogtFuXp4rxsS7uEqEq1pOkUqV4TwSLZ8+pdV4wsrXtA7XEYsh59+dLCwAWX879FczEZA8kC4EMKfFnWgZBP1c9mJIUSN3KEc5UYWc63+tshxe2S0CRxA714AT4eiCaqg="
+
+before_script:
+  - curl --silent $TRAVIS_SSH_PRIVATE_KEY_URL > ~/.ssh/id_rsa
+  - git remote add heroku git@heroku.com:pantzbot.git
+
+# This will later be a test suite.
+script: true
+
+after_success: "[[ $TRAVIS_PULL_REQUEST ]] || git push heroku $TRAVIS_BRANCH"
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
