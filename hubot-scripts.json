@@ -2,7 +2,6 @@
   "factoid.coffee",
   "isup.coffee",
   "kittens.coffee",
-  "pagerduty.coffee",
   "plusplus.coffee",
   "redis-brain.coffee",
   "scrumnotes.coffee",
