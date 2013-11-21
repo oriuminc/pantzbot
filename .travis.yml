@@ -12,7 +12,7 @@ before_script:
 # This will later be a test suite.
 script: true
 
-after_success: "[[ $TRAVIS_PULL_REQUEST ]] || git push heroku $TRAVIS_BRANCH"
+after_success: "[[ `$TRAVIS_PULL_REQUEST` ]] || git push heroku $TRAVIS_BRANCH"
 
 branches:
   only:
