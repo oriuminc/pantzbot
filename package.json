@@ -28,12 +28,12 @@
     "oauth": "*",
     "sprintf": "*",
     "moment": "*",
-    "twit": "~1.1.8",
     "underscore": "~1.3",
     "hubot-slack": "git://github.com/myplanet-experimental/hubot-slack.git#f22b2a7",
     "hubot-drupalorg": "*",
     "hubot-gittip": "~0.0.1",
     "hubot-status": "~0.0.2",
+    "hubot-tweeter": "git://github.com/patcon/hubot-tweeter.git#1-main-script-missing",
     "hubot-vanity-github": "git://github.com/patcon/hubot-vanity-github.git#81407a0",
     "hubot-uptimerobot": "0.0.2"
   }

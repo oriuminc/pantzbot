@@ -2,6 +2,7 @@
   "hubot-drupalorg",
   "hubot-gittip",
   "hubot-status",
+  "hubot-tweeter",
   "hubot-uptimerobot",
   "hubot-vanity-github"
 ]
