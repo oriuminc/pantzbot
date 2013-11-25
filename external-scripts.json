@@ -1,6 +1,7 @@
 [
   "hubot-drupalorg",
   "hubot-gittip",
+  "hubot-status",
   "hubot-uptimerobot",
   "hubot-vanity-github"
 ]
