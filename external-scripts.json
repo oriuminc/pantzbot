@@ -4,6 +4,5 @@
   "hubot-status",
   "hubot-tweeter",
   "hubot-uptimerobot",
-  "hubot-vanity-github",
-  "hubot-openbar"
+  "hubot-vanity-github"
 ]
