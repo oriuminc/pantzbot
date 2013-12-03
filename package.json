@@ -34,7 +34,7 @@
     "hubot-gittip": "~0.0.1",
     "hubot-status": "~0.0.2",
     "hubot-tweeter": "git://github.com/patcon/hubot-tweeter.git#1-main-script-missing",
-    "hubot-vanity-github": "git://github.com/patcon/hubot-vanity-github.git#81407a0",
+    "hubot-vanity-github": "~0.0.1",
     "hubot-vanity-dribbble": "~0.0.1",
     "hubot-uptimerobot": "~0.0.2"
   }
