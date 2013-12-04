@@ -29,6 +29,7 @@
     "hubot-drupalorg": "*",
     "hubot-factoid": "~0.0.1",
     "hubot-gittip": "~0.0.1",
+    "hubot-plusplus": "~1.0.0",
     "hubot-status": "~0.0.2",
     "hubot-tweeter": "git://github.com/patcon/hubot-tweeter.git#1-main-script-missing",
     "hubot-vanity-github": "~0.0.1",
