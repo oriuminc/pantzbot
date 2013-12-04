@@ -1,5 +1,6 @@
 [
   "hubot-drupalorg",
+  "hubot-email-hashtag",
   "hubot-factoid",
   "hubot-gittip",
   "hubot-plusplus",

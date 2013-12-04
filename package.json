@@ -28,6 +28,7 @@
     "sprintf": "*",
     "hubot-slack": "git://github.com/myplanet-experimental/hubot-slack.git#f22b2a7",
     "hubot-drupalorg": "*",
+    "hubot-email-hashtag": "~0.0.1",
     "hubot-factoid": "~0.0.1",
     "hubot-gittip": "~0.0.1",
     "hubot-plusplus": "~1.0.0",
