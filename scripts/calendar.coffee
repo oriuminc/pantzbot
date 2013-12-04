@@ -7,6 +7,9 @@
 #
 # It automatically retrieves the URL looking for changes and new events
 #
+# Dependencies:
+#   ical
+#   request
 #
 # Commands:
 #   hubot calendar <room> <calendar-url> - Set calendar for some room using events from some feed
