@@ -1,8 +1,6 @@
 [
   "github-issue-link.coffee",
   "isup.coffee",
-  "kittens.coffee",
   "redis-brain.coffee",
-  "scrumnotes.coffee",
   "twitter_mention.coffee"
 ]
