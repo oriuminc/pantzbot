@@ -1,6 +1,7 @@
 [
   "github-issue-link.coffee",
   "isup.coffee",
+  "kittens.coffee",
   "redis-brain.coffee",
   "twitter_mention.coffee"
 ]
